@@ -53,7 +53,7 @@ public class Main {
         return max;
     }
     
-        public static int minimum(int[] a) {
+    public static int minimum(int[] a) {
         int min = a[0];
         for(int i : a) {
             if(i < min)
