@@ -89,7 +89,7 @@ public class Main {
         }
     }
     
-        public static int minimumOfRange(int[] a, int start) {
+    public static int minimumOfRange(int[] a, int start) {
         int min = a[start];
         for(int i = start; i < a.length; i++) {
             if(i < min)
