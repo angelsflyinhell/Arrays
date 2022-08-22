@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Main
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=array
+comment2.target=void\ printArray(int[])
+comment3.params=a\ value
+comment3.target=int\ searchIndex(int[],\ int)
+comment4.params=a\ i\ j
+comment4.target=int[]\ swap(int[],\ int,\ int)
+comment5.params=a
+comment5.target=int[]\ reverse(int[])
+comment6.params=a
+comment6.target=int[]\ cloneArray(int[])
+comment7.params=a
+comment7.target=int\ maximum(int[])
+comment8.params=a
+comment8.target=int\ minimum(int[])
+numComments=9
