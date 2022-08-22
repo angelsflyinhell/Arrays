@@ -80,8 +80,21 @@ public class Main {
         return max;
     }
     
+    // Selection Sort A7 
+    
     public static void selectionSort(int[] a) {
-        int min = minimum(a);
-        swap()
+        for(int i = 0; i < a.length; i++) {
+            int min = minimumOfRange(a, i);
+            swap(a, minIndex(a), i);
+        }
+    }
+    
+        public static int minimumOfRange(int[] a, int start) {
+        int min = a[start];
+        for(int i = start; i < a.length; i++) {
+            if(i < min)
+                min = i;
+        }
+        return min;
     }
 }
