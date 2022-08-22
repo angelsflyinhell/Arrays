@@ -61,4 +61,27 @@ public class Main {
         }
         return min;
     }
+    
+    public static int minIndex(int[] a) {
+        int min = 0;
+        for(int i = 0; i < a.length; i++) {
+            if(a[i] < min)
+                min = i;
+        }
+        return min;
+    }
+    
+    public static int maxIndex(int[] a) {
+        int max = 0;
+        for(int i = 0; i < a.length; i++) {
+            if(a[i] > max)
+                max = i;
+        }
+        return max;
+    }
+    
+    public static void selectionSort(int[] a) {
+        int min = minimum(a);
+        swap()
+    }
 }
