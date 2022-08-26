@@ -84,6 +84,18 @@ public class Main {
     
     public static void selectionSort(int[] a) {
         for(int i = 0; i < a.length - 1; i++) {
+            int minIndex = i;
+            for(int j = i + 1; j < a.length; j++) {
+                if(a[minIndex] > a[j])
+                    minIndex = j;
+            }
+            swap(a, minIndex, i);
+        }
+        printArray(a);
+    }
+    
+    public static void bubbleSort(int[] a) {
+        for(int i = 0; i < a.length - 1; i++) {
             for(int j = i + 1; j < a.length; j++) {
                 if(a[i] > a[j])
                     swap(a,j, i);
