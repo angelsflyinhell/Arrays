@@ -1,5 +1,6 @@
 import java.util.Random; 
 import java.util.Date;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -123,25 +124,33 @@ public class Main {
     public static void benchmark(int cycles) {
         for(int i = 1; i <= cycles; i++) {
             int elements = (int) Math.pow(2, i);
+            int[] blueprint = fillArray(new int[elements]);
             {
-                int[] arr = fillArray(new int[elements]);
+                int[] arr = cloneArray(blueprint);
                 double preCalc = System.currentTimeMillis();
                 bubbleSort(arr);
                 System.out.println("BubbleSort: " + elements + " Elements took " + (System.currentTimeMillis() - preCalc) + "ms.");
             }
             
             {
-                int[] arr = fillArray(new int[elements]);
+                int[] arr = cloneArray(blueprint);
                 double preCalc = System.currentTimeMillis();
                 selectionSort(arr);
                 System.out.println("SelectionSort: " + elements + " Elements took " + (System.currentTimeMillis() - preCalc) + "ms.");    
             }
             
             {
-                int[] arr = fillArray(new int[elements]);
+                int[] arr = cloneArray(blueprint);
                 double preCalc = System.currentTimeMillis();
                 insertionSort(arr);
                 System.out.println("InsertionSort: " + elements + " Elements took " + (System.currentTimeMillis() - preCalc) + "ms.");
+            }
+            
+            {
+                int[] arr = cloneArray(blueprint);
+                double preCalc = System.currentTimeMillis();
+                Arrays.sort(arr);
+                System.out.println("QuickSort: " + elements + " Elements took " + (System.currentTimeMillis() - preCalc) + "ms.");
             }
         }
     }
