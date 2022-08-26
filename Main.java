@@ -127,21 +127,21 @@ public class Main {
                 int[] arr = fillArray(new int[elements]);
                 double preCalc = System.currentTimeMillis();
                 bubbleSort(arr);
-                System.out.println("BubbleSort: " + elements + " Elements took " + (System.currentTimeMillis() - preCalc));
+                System.out.println("BubbleSort: " + elements + " Elements took " + (System.currentTimeMillis() - preCalc) + "ms.");
             }
             
             {
                 int[] arr = fillArray(new int[elements]);
                 double preCalc = System.currentTimeMillis();
                 selectionSort(arr);
-                System.out.println("SelectionSort: " + elements + " Elements took " + (System.currentTimeMillis() - preCalc));    
+                System.out.println("SelectionSort: " + elements + " Elements took " + (System.currentTimeMillis() - preCalc) + "ms.");    
             }
             
             {
                 int[] arr = fillArray(new int[elements]);
                 double preCalc = System.currentTimeMillis();
                 insertionSort(arr);
-                System.out.println("InsertionSort: " + elements + " Elements took " + (System.currentTimeMillis() - preCalc));
+                System.out.println("InsertionSort: " + elements + " Elements took " + (System.currentTimeMillis() - preCalc) + "ms.");
             }
         }
     }
