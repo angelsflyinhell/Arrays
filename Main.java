@@ -127,28 +127,28 @@ public class Main {
                 int[] arr = fillArray(new int[elements]);
                 double preCalc = System.currentTimeMillis();
                 bubbleSort(arr);
-                System.out.println(elements + " Elements took " + (System.currentTimeMillis() - preCalc));
+                System.out.println("BubbleSort: " + elements + " Elements took " + (System.currentTimeMillis() - preCalc));
             }
             
             {
                 int[] arr = fillArray(new int[elements]);
                 double preCalc = System.currentTimeMillis();
                 selectionSort(arr);
-                System.out.println(elements + " Elements took " + (System.currentTimeMillis() - preCalc));    
+                System.out.println("SelectionSort: " + elements + " Elements took " + (System.currentTimeMillis() - preCalc));    
             }
             
             {
                 int[] arr = fillArray(new int[elements]);
                 double preCalc = System.currentTimeMillis();
                 insertionSort(arr);
-                System.out.println(elements + " Elements took " + (System.currentTimeMillis() - preCalc));
+                System.out.println("InsertionSort: " + elements + " Elements took " + (System.currentTimeMillis() - preCalc));
             }
         }
     }
     
     private static int[] fillArray(int[] arr) {
-        for(int i : arr) {
-            i = new Random().nextInt();
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = new Random().nextInt();
         }
         return arr;
     } 
