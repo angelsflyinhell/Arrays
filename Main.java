@@ -1,3 +1,6 @@
+import java.util.Random; 
+import java.util.Date;
+
 public class Main {
     public static void main(String[] args) {
         int length = Integer.parseInt(args[0]);
@@ -91,7 +94,7 @@ public class Main {
             }
             swap(a, minIndex, i);
         }
-        printArray(a);
+        // printArray(a);
     }
     
     public static void bubbleSort(int[] a) {
@@ -101,6 +104,52 @@ public class Main {
                     swap(a,j, i);
             }
         }
-        printArray(a);
+        // printArray(a);
     }
+    
+    public static void insertionSort(int[] a) {
+        for(int i = 1; i < a.length; i++) {
+            int temp = a[i];
+            int j = i;
+            while(j > 0 && a[j - 1] > temp) {
+                a[j] = a[j - 1];
+                j--;
+            }
+            a[j] = temp;
+        }
+        // printArray(a);
+    }
+    
+    public static void benchmark(int cycles) {
+        for(int i = 1; i <= cycles; i++) {
+            int elements = (int) Math.pow(2, i);
+            {
+                int[] arr = fillArray(new int[elements]);
+                double preCalc = System.currentTimeMillis();
+                bubbleSort(arr);
+                System.out.println(elements + " Elements took " + (System.currentTimeMillis() - preCalc));
+            }
+            
+            {
+                int[] arr = fillArray(new int[elements]);
+                double preCalc = System.currentTimeMillis();
+                selectionSort(arr);
+                System.out.println(elements + " Elements took " + (System.currentTimeMillis() - preCalc));    
+            }
+            
+            {
+                int[] arr = fillArray(new int[elements]);
+                double preCalc = System.currentTimeMillis();
+                insertionSort(arr);
+                System.out.println(elements + " Elements took " + (System.currentTimeMillis() - preCalc));
+            }
+        }
+    }
+    
+    private static int[] fillArray(int[] arr) {
+        for(int i : arr) {
+            i = new Random().nextInt();
+        }
+        return arr;
+    } 
 }
