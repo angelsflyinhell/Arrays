@@ -161,4 +161,11 @@ public class Main {
         }
         return arr;
     } 
+    
+    public static int fib(int n) {
+        if(n <= 2)
+            return 1;
+        System.out.print(n + " ");
+        return fib(n - 2) + fib(n - 1);
+    }
 }
