@@ -15,7 +15,7 @@ public class Palindrom
         if(index == text.length() / 2)
             return true;
         
-        if(text.charAt(index) == text.charAt(text.length() - index - 1))
+        if(text.toLowerCase().charAt(index) == text.toLowerCase().charAt(text.length() - index - 1))
             return isPalindromRecursive(text, ++index);
         return false;
     }
