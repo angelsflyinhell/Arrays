@@ -2,4 +2,6 @@
 comment0.target=Palindrom
 comment1.params=text
 comment1.target=boolean\ isPalindrom(java.lang.String)
-numComments=2
+comment2.params=text\ index
+comment2.target=boolean\ isPalindromRecursive(java.lang.String,\ int)
+numComments=3
