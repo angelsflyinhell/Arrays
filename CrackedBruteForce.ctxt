@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=CrackedBruteForce
+comment1.params=i\ max
+comment1.target=void\ forceRecursive(int,\ int)
+comment2.params=length
+comment2.target=void\ benchmark(int)
+numComments=3
